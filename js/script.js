@@ -19,15 +19,22 @@ con difficoltà 2 => tra 1 e 50 */
 
 var numeroMacchina=[];
 var utenteNumeroInserito;
+var numeroCasuale;
 
 // creo un lista di elementi randomici di lunghezza 16:
 for(var n=0; n<16; n++){
-    numeroMacchina.push(numeriRandom(1,100));
-    if(n === numeroMacchina[n]){
-        console.log('uno o più numeri sono stati duplicati');
-    } 
-}
+    
+    numeroCasuale=numeriRandom(1,100);
+    if(numeroCasuale != numeroMacchina.length){
+        //numeroMacchina.push(numeroCasuale);
+        for(var i=0; i<numeroMacchina.length; i++){
+            if(numeroMacchina[i] != numeriCasuale){
+                numeroMacchina.push(numeroCasuale);
+            }
 
+        }
+    }
+}
 console.log(numeroMacchina);
 
 // chiedo all'utente di inserire un numero per tot, volte:
@@ -39,8 +46,8 @@ do {
 
 
 // confronto fra il numero passato dall'utente con il prompt e la lista presente
-var esito= trovaElemento(numeroMacchina, utenteNumeroInserito);
-//console.log(esito);
+/* var esito= trovaElemento(numeroMacchina, utenteNumeroInserito);
+console.log(esito); */
 
 // manca il controllo sul valore passato nel prompt
 // manca il controllo sui valori duplicati nell'array
@@ -54,10 +61,10 @@ var esito= trovaElemento(numeroMacchina, utenteNumeroInserito);
 // funzioni
  
 function numeriRandom(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 } 
 
-function trovaElemento(array,elemento){
+/* function trovaElemento(array,elemento){
     var i=0;
     while(i<array.length){
         if( elemento == array[i]){
@@ -66,7 +73,7 @@ function trovaElemento(array,elemento){
         i++
     }
     return false, 'Hai superato il campo minato, hai vinto';
-}
+} */
 
 
 
