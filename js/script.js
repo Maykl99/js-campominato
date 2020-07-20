@@ -1,6 +1,8 @@
-// il computer deve generare 16 numeri casuali fra 1 e 100 senza duplicati, 
-// in seguito l'utente deve inserire 84 numeri con 84 possibilità ma senza duplicati, 
-// se becca un numero presente nella lista dei 16 numeri casuali ha perso e il gioco termina
+// il computer deve generare 16 numeri casuali fra 1 e 100 FATTO!
+// senza duplicati, 
+// in seguito l'utente deve inserire 84 numeri con 84 possibilità FATTO!
+//ma senza duplicati, 
+// se becca un numero presente nella lista dei 16 numeri casuali ha perso e il gioco termina // FATTO!
 //
 //Il computer deve generare 16 numeri casuali tra 1 e 100.I numeri non possono essere duplicati
 /* In seguito deve chiedere all'utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
@@ -15,36 +17,34 @@ con difficoltà 1 =>  tra 1 e 80
 con difficoltà 2 => tra 1 e 50 */
 
 
- var numeroMacchina=[];
- var utenteNumeroInserito;
+var numeroMacchina=[];
+var utenteNumeroInserito;
 
+// creo un lista di elementi randomici di lunghezza 16:
 for(var n=0; n<16; n++){
-    if(n == numeroMacchina[n]){
-        alert('un numero è stato duplicato');
-    }
-    numeroMacchina.push(numeriRandom(1,100)); 
+    numeroMacchina.push(numeriRandom(1,100));
+    if(n === numeroMacchina[n]){
+        console.log('uno o più numeri sono stati duplicati');
+    } 
 }
-//console.log(numeroMacchina); // stampa un array di 16 numeri casuali
 
-var n=0; // l'utente dovrà inserire un tot volte un numero casuale finchè non finirà le sue possibilità
+console.log(numeroMacchina);
+
+// chiedo all'utente di inserire un numero per tot, volte:
+var n=0;
 do {
-    utenteNumeroInserito=parseInt(prompt('Inserisci un numero casaule fra 1 e 100')); // l'utente inserise un numero da 1 a 100
+    //utenteNumeroInserito=parseInt(prompt('Inserisci un numero casaule fra 1 e 100'));
     n++;
-} while (n<=4);
+} while (n<=2);
 
 
+// confronto fra il numero passato dall'utente con il prompt e la lista presente
 var esito= trovaElemento(numeroMacchina, utenteNumeroInserito);
-console.log(esito);
+//console.log(esito);
 
-
-
-
-
-
-
-
-
-
+// manca il controllo sul valore passato nel prompt
+// manca il controllo sui valori duplicati nell'array
+// manca il risultato, cioè il numero di volte che l'utente ha inserito un numero consentito
 
 
 
