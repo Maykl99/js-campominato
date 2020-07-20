@@ -1,15 +1,32 @@
 var numeroMacchina=[];
 var elemento;
 var numero;
+
+// generazione numeri random computer
 for(var i=0; i<16; i++){
-    elemento = numeriRandom(1,10);
-    numeroMacchina.push(elemento);
+    elemento = numeriRandom(1,100);
+    if(!numeroMacchina.includes(elemento)){
+        numeroMacchina.push(elemento);
+    }
 }
 
-numero=trovaElemento(numeroMacchina,elemento);
-console.log(numero);
-console.log(numeroMacchina);
+var utenteNumeri=[];
+var n=0;
+do{
+    utenteNumeroInserito=parseInt(prompt('Inserisci un numero casaule fra 1 e 100'));
+    if()
+/*     var utente = utente[utenteNumeroInserito];
+    if(!utente.includes(utenteNumeroInserito)){
+         utente;
+        utente.push(utenteNumeroInserito)
+    } */
+    n++;
+}while(n <= (max - 16))
 
+var esito=trovaElemento(numeroMacchina,utenteNumeroInserito);
+console.log(utente)
+console.log(esito)
+console.log(numeroMacchina)
 
 // funzione genera numero random 
 function numeriRandom(min, max) {
