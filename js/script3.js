@@ -28,13 +28,13 @@ for(var i =0; i<= 5; i++){
     }else if(trovaElemento(listaNumeri,listaNumeriUtente)){
         console.log('hai perso con ' + listaNumeriUtente.length + ' tentativi');
     }
+    else if(listaNumeriUtente.length == 5){
+        console.log('hai vinto con ' + listaNumeriUtente.length + ' tentativi');
+    }
     else{
         listaNumeriUtente.push(elementoLista);
     }
 
-    if(listaNumeriUtente.length == 5){
-        console.log('hai vinto con ' + listaNumeriUtente.length + ' tentativi');
-    }
     
 }
 
