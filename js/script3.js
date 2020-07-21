@@ -18,7 +18,7 @@ console.log(listaNumeri) // stampa i numeri
 var listaNumeriUtente=[];
 
 for(var i =0; i<= 5; i++){
-    var elementoLista=parseInt(prompt('Inserisci un numero'));
+     var elementoLista=parseInt(prompt('Inserisci un numero'));
     if(elementoLista < 1 || elementoLista > 100){
         alert('numero inserito non supportato');
         listaNumeriUtente;
@@ -34,7 +34,30 @@ for(var i =0; i<= 5; i++){
     else{
         listaNumeriUtente.push(elementoLista);
     }
+/*     var elementoLista=parseInt(prompt('Inserisci un numero'));
+    switch (elementoLista) {
+        case ((elementoLista < 1 || elementoLista > 100)):
+            alert('numero inserito non supportato');
+            listaNumeriUtente;    
+            break;
 
+        case isNaN(elementoLista):
+            alert('valore stringa non supportato');
+            listaNumeriUtente;
+            break;
+
+        case trovaElemento(listaNumeri, listaNumeriUtente):
+            console.log('hai perso con '+ listaNumeriUtente.length + ' tentativi');
+            break;
+
+        case trovaElemento(listaNumeriUtente.length == 5):
+            console.log('hai vinto con '+ listaNumeriUtente.length + ' tentativi');
+            break;
+    
+        default:
+            listaNumeriUtente.push(elementoLista);
+            break;
+    } */
     
 }
 
